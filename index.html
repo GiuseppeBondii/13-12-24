@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOMBOLONE DI NATALE</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #fdf2e9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .poster {
+            background-color: #ed4d4d;
+            align-self: center;
+            width: 100%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 5%;
+            padding: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .poster h1 {
+            margin-top: 3vh;
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        .poster .subtitle {
+            margin-top: 30px;
+            background-color: #35853d;
+            padding: 5px 15px;
+            border-radius: 15px;
+            display: inline-block;
+            margin:10px 0;
+            margin-bottom:30px;
+        }
+
+        .poster .date {
+            font-size: 1.5em;
+            color: #fdf2e9;
+            font-style: italic;
+            margin: 10px 0;
+        }
+
+        .poster .highlight {
+            background-color: white;
+            color: #35853d;
+            padding: 5px 10px;
+            border-radius: 10px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .poster .details {
+            background-color: #ffffff;
+            color: #35853d;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+
+        .poster .board {
+            margin: 20px auto;
+            width: 80%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            gap: 5px;
+        }
+
+        .poster .board div {
+            height: 50px;
+            border-radius: 5px;
+        }
+
+        .poster .board .red { background-color: #ed4d4d; }
+        .poster .board .orange { background-color: #f89f44; }
+        .poster .board .purple { background-color: #35853d; }
+        .poster .board .white { background-color: #fdf2e9; border: 1px solid #ccc; }
+
+        .poster .dice {
+            width: 50px;
+            height: 50px;
+            margin: 10px auto;
+            background-color: #f89f44;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .poster .footer {
+            font-size: 0.8em;
+            margin-top: 20px;
+        }
+
+        .euro{
+            font-size:5rem;
+        }
+
+        .DISPLAYROW {
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+    margin-right: 20px;
+    gap: 10px; /* Spazio tra gli elementi */
+}
+        .prezzoinit{
+            align-self: center;
+            font-size:2rem;
+            margin-left: 10%;
+        }
+
+        .sx {
+    font-size: 1.8rem;
+    align-self: flex-start;
+    text-align: left; /* Allinea il testo a sinistra */
+}
+
+.dx {
+    font-size: 1.8rem;
+    flex: 1;
+    align-self: flex-end;
+    text-align: right; /* Allinea il testo a destra */
+}
+
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <h1>TOMBOLONE DI NATALE</h1>
+        <div class="date">13 Dicembre</div>
+        <div class="board">
+            <div class="red"></div>
+            <div class="orange"></div>
+            <div class="purple"></div>
+            <div class="white"></div>
+            <div class="red"></div>
+            <div class="orange"></div>
+            <div class="red"></div>
+            <div class="white"></div>
+            <div class="white"></div>
+            <div class="orange"></div>
+            <div class="purple"></div>
+            <div class="red"></div>
+            <div class="white"></div>
+            <div class="white"></div>
+            <div class="purple"></div>
+            <div class="red"></div>
+            <div class="orange"></div>
+            <div class="purple"></div>
+            <div class="white"></div>
+            <div class="red"></div>
+            <div class="orange"></div>
+            <div class="white"></div>            
+            <div class="orange"></div>
+            <div class="red"></div>
+            <div class="white"></div>
+            <div class="red"></div>
+            <div class="white"></div>
+        </div>
+        <div class="subtitle">Listino Prezzi</div>
+
+        <div class="DISPLAYROW">
+            
+        <div class="euro">5€</div>
+        <div class="prezzoinit"> INGRESSO + 3 CARTELLE + 1 BIRRA</div>
+        </div>
+        <div class="board">
+            <div class="red"></div>
+            <div class="orange"></div>
+            <div class="purple"></div>
+            <div class="white"></div>
+            <div class="red"></div>
+            <div class="orange"></div>
+            <div class="red"></div>
+            <div class="white"></div>
+            <div class="white"></div>
+        </div>
+        <div class="DISPLAYROW">
+            <div class="sx">
+                + 0,50 € :
+            </div>
+            <div class="dx">
+                1 cartella
+            </div>
+        </div>
+        <div class="DISPLAYROW">
+            <div class="sx">
+                + 1,50 € :
+            </div>
+            <div class="dx">
+                1 birra
+            </div>
+        </div>
+        <div class="DISPLAYROW">
+            <div class="sx">
+                + 1,00 € :
+            </div>
+            <div class="dx">
+                3 cartelle
+            </div>
+        </div>
+        <div class="DISPLAYROW">
+            <div class="sx">
+                + 2 € :
+            </div>
+            <div class="dx">
+                3 cartelle & 1 birra
+            </div>
+        </div>
+
+        <div class="details">Piazza San Francesco<br>
+            Mina, Erma, Juicy</div>
+    </div>
+</body>
+</html>
