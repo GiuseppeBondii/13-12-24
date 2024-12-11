@@ -44,7 +44,7 @@
             border-radius: 15px;
             display: inline-block;
             margin:10px 0;
-            margin-bottom:30px;
+            margin-bottom:20px;
         }
 
         .poster .date {
@@ -142,6 +142,61 @@
     align-self: flex-end;
     text-align: right; /* Allinea il testo a destra */
 }
+.elenco{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.premi{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+
+}
+.finepremi{
+    margin-left: 40px  ;
+    margin-right: 40px  ;
+
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+ /* Number animation styles */
+ .background-numbers {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .number {
+            position: absolute;
+            font-size: 2rem;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.5);
+            animation: floatNumbers 5s linear infinite;
+        }
+
+        @keyframes floatNumbers {
+            0% {
+                transform: translateY(28vh);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-5%);
+                opacity: 0;
+            }
+            }
+
 
     </style>
 </head>
@@ -228,9 +283,87 @@
                 3 cartelle & 1 birra
             </div>
         </div>
+        <div class="subtitle" style="margin-top: 50px; ">Premi</div>
+        <div class="elenco">
+        <div class="premi">
+            Stereo
+        </div>
+        <div class="premi">
+            Elettrodomestici
+        </div>
+        <div class="premi">
+            PlayStation e giochi
+        </div>
+        <div class="premi">
+            Set di teglie
+        </div>
+        <div class="premi">
+            Borse Frigo
+        </div>
+        <div class="premi">
+            Controller
+        </div>
+        <div class="premi">
+            Utensili Cucina
+        </div>
+        <div class="premi">
+            Set Sommelier
+        </div>
+        <div class="premi">
+            Computer
+        </div>
+        <div class="premi">
+            Ventialtore a colonna
+        </div>
+        <div class="premi">
+            Radiosveglia
+        </div>
+        <div class="premi">
+            Bigiotteria
+        </div>
+        <div class="premi">
+            Marsupi
+        </div>
+        <div class="premi">
+            Borsa special edition
+        </div>
+        <div class="premi">
+            Agende
+        </div>
+        <div class="finepremi">
+            e molti altri ancora... Vi aspettiamo!
+        </div>
+    </div>
+    <div class="background-numbers" id="backgroundNumbers"></div>
+
+
+        
 
         <div class="details">Piazza San Francesco<br>
             Mina, Erma, Juicy</div>
     </div>
+    <script>
+        const container = document.getElementById('backgroundNumbers');
+        const colors = ['#ed4d4d', '#f89f44', '#35853d', '#ffffff'];
+
+        function createNumber() {
+            const number = document.createElement('div');
+            number.classList.add('number');
+            number.textContent = Math.floor(Math.random() * 90) + 1; // Numeri da 1 a 90
+            number.style.left = Math.random() * 100 + 'vw';
+            number.style.color = colors[Math.floor(Math.random() * colors.length)];
+            number.style.fontSize = Math.random() * 3 + 1 + 'rem';
+            container.appendChild(number);
+
+            // Rimuovi il numero dopo che l'animazione termina
+            number.addEventListener('animationend', () => {
+                number.remove();
+            });
+        }
+
+        // Genera numeri casuali ogni 300ms
+        setInterval(createNumber, 800);
+    </script>
+    
 </body>
 </html>
